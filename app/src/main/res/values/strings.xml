@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">BrainDeck</string>
+
+    <!--    MAIN ACTIVITY-->
+    <string name="Btn_Login">Login</string>
+    <string name="Btn_Registro">Registro</string>
+
+    <!--    ACTIVIDAD DE REGISTRO-->
+    <string name="CrearCuentaTXT">Crear una cuenta</string>
+    <string name="NombreEt">nombre</string>
+    <string name="CorreoEt">Correo electrónico</string>
+    <string name="ContraseñaEt">Contraseña</string>
+    <string name="ConfirmarContraseñaEt">Confirmar contraseña</string>
+    <string name="RegistrarUsuario">Registrar</string>
+    <string name="TengounacuentaTXT">Tengo una cuenta</string>
+<!--MENU PRINCIPAL-->
+<string name="CerrarSesion">Salir</string>
+
+<!--    ACTIVIDAD LOGIN-->
+    <string name="IniciarSesionTXT">Iniciar Sesión</string>
+    <string name="CorreoLogin">Correo</string>
+    <string name="PassLogin">Contraseña</string>
+    <string name="Btn_Logeo">Ingresar</string>
+    <string name="UsuarioNuevoTXT">eyy, si no tienes una cuenta crea una presionando aquí;3</string>
+</resources>
