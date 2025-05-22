@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,20 +7,268 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuPrincipal">
-    <LinearLayout
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
         android:gravity="center">
-    </LinearLayout>
-    <Button
-        android:id="@+id/CerrarSesion"
-        android:text="@string/CerrarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            app:cardBackgroundColor = '@color/colorPrimary'
+            app:cardUseCompatPadding="true"
+            android:padding="0.2dp"
+            app:cardCornerRadius="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/BienvenidoPrincipal"
+                    android:textColor= "#fff"
+                    android:fontFamily="@font/josefinsans"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ProgressBar
+                    android:id="@+id/progressBarDatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/UidPrincipal"
+                    android:text="@string/UidPrincipal"
+                    android:visibility="gone"
+                    android:textColor= "#fff"
+                    android:fontFamily="@font/josefinsans"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/NombresPrincipal"
+                    android:text="@string/NombresPrincipal"
+                    android:visibility="gone"
+                    android:textColor= "#fff"
+                    android:fontFamily="@font/josefinsans"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/CorreoPrincipal"
+                    android:text="@string/CorreoPrincipal"
+                    android:visibility="gone"
+                    android:textColor= "#fff"
+                    android:fontFamily="@font/josefinsans"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
 
-    </Button>
 
-    
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-</RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation = "vertical">
+<!-- OPCION 1 Y 2 -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation = "horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="2">
+
+               <!-- opcion 1 de ver mazo -->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation = "vertical"
+                    android:gravity = "center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src = "@drawable/deck"/>
+
+                    <Button
+                        android:id="@+id/VerMazo"
+                        android:text="@string/VerMazo"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/josefinsans"
+                        />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!-- OPCION 2  editar mazo-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation = "vertical"
+                    android:gravity = "center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src = "@drawable/icono_editar"/>
+
+                    <Button
+                        android:id="@+id/EditarMazo"
+                        android:text="@string/EditarMazo"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/josefinsans"
+                        />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!-- OPCION 3 y 4-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation = "horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="2">
+
+                <!-- OPCION 3 crear mazo-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation = "vertical"
+                    android:gravity = "center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src = "@drawable/papel_1"/>
+
+                    <Button
+                        android:id="@+id/CrearMazo"
+                        android:text="@string/CrearMazo"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/josefinsans"
+                        />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!-- OPCION 4 modo de juego-->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation = "vertical"
+                    android:gravity = "center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src = "@drawable/modojuego"/>
+
+                    <Button
+                        android:id="@+id/ModoJuego"
+                        android:text="@string/ModoJuego"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/josefinsans"
+                        />
+
+
+
+
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!-- PUNTAJES 5-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation = "horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="1">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:orientation = "vertical"
+                    android:gravity = "center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src = "@drawable/puntajes"/>
+
+                    <Button
+                        android:id="@+id/Puntajes"
+                        android:text="@string/Puntajes"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/josefinsans"
+                        />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+<!-- BOTON CERRAR SESION -->
+        <Button
+            android:id="@+id/CerrarSesion"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="@string/CerrarSesion" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

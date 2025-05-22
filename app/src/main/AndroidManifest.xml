@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CatarsisAPP">
         <activity
+            android:name=".VerMazo.Ver_Mazo"
+            android:exported="false" />
+        <activity
+            android:name=".Puntajes.Puntajes"
+            android:exported="false" />
+        <activity
+            android:name=".ModoJuego.Modo_Juego"
+            android:exported="false" />
+        <activity
+            android:name=".EditarMazo.Editar_Mazo"
+            android:exported="false" />
+        <activity
+            android:name=".CrearMazo.Crear_Mazo"
+            android:exported="false" />
+        <activity
             android:name=".MenuPrincipal"
             android:exported="false" />
         <activity
@@ -22,7 +37,7 @@
             android:name=".Pantalla_De_Carga"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.main" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

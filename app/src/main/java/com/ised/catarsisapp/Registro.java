@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -172,6 +173,7 @@ String nombre="", correo="", contraseña="", confirmarcontraseña="";
                     public void onSuccess(Void unused) {
                         progressDialog.dismiss();
                         Toast.makeText(Registro.this, "La cuenta se creo con exito ^-^", Toast.LENGTH_SHORT).show();
+                        Log.d("Registro", "Datos guardados para UID: " + vid); // Agregar esto
                         startActivity(new Intent(Registro.this, MenuPrincipal.class));
                         finish();
 
@@ -184,7 +186,7 @@ String nombre="", correo="", contraseña="", confirmarcontraseña="";
                     public void onFailure(@NonNull Exception e) {
 
                         progressDialog.dismiss();
-                        Toast.makeText(Registro.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Registro.this," "+e.getMessage(),Toast.LENGTH_SHORT).show();
 
                     }
                 });
